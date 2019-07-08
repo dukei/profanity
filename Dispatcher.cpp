@@ -68,7 +68,7 @@ void Dispatcher::OpenCLException::OpenCLException::throwIfError(const std::strin
 }
 
 cl_command_queue Dispatcher::Device::createQueue(cl_context & clContext, cl_device_id & clDeviceId) {
-	const cl_command_queue ret = clCreateCommandQueueWithProperties(clContext, clDeviceId, NULL, NULL);
+	const cl_command_queue ret = clCreateCommandQueue(clContext, clDeviceId, NULL, NULL);
 	return ret == NULL ? throw std::runtime_error("failed to create command queue") : ret;
 }
 

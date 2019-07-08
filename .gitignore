@@ -3,3 +3,6 @@
 *.so
 cache-opencl.*
 bin
+x64
+Win32
+.vs
